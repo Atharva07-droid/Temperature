@@ -1,0 +1,37 @@
+print("3")
+print("2")
+print("1")
+name = input("enter a valid name ")
+names = name.lower()
+if names == 'github':
+    print('hello there ' + name)
+    # f' the name is {name}'
+    temp = input('please enter the temp ')
+    if temp[-1] == 'K':
+        print('it is in kelvin')
+        kelvin = (int(temp[0:-1]))
+        celcius = kelvin - 273
+        print("celcius temperature is " + str(celcius) + " C")
+        farenheit = (celcius * 9 / 5) + 32
+        print("the farenheit temperature is " + str(farenheit) + " F")
+    elif temp[-1] == 'C':
+        print('it is in celcius')
+        celcius = int(temp[0:-1])
+        kelvin = celcius + 273
+        print("kelvin temperature is " + str(kelvin) + " K")
+        farenheit = (celcius * 9 / 5) + 32
+        print("the farenheit temperature is " + str(farenheit) + " F")
+    elif temp[-1] == 'F':
+        print("it is in farenheit")
+        farenheit = int(temp[0:-1])
+        celcius = (farenheit - 32) * 5 / 9
+        print("celcius temperature is " + str(celcius) + " C")
+        kelvin = celcius + 273
+        print("kelvin temperature is " + str(kelvin) + " K")
+    else:
+        print("temperature unit not known!")
+else:
+    print('not defined user')
+    name1 = input("Enter a name ")
+    name2 = name1.lower()
+    print("the name in reverse is " + name2[::-1])
